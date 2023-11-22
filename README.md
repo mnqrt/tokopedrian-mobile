@@ -1,3 +1,25 @@
+# Tugas 9
+> 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, terdapat alternatif lain seperti dictionary dengan key-value. Namun penggunaan model lebih disarankan agar kita dapat memastikan bahwa semua atribut pada object tersebut ada dan tidak kosong.
+
+> 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+Kegunaannya adalah untuk menyimpan informasi login sehingga aplikasi mengetahui status login dan sesi pengguna sekarang. Gunanya adalah agar informasi login pada semua komponen konsisten, hal ini berarti apabila terdapat perubahan pada sesi login dalam suatu aplikasi, informasi ini akan berubah pada komponen ataupun aplikasi lainnya juga.
+
+> 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+Hal ini dapat dilakukan dengan mengimplementasikan fungsi asinkronus yang melakukan fetching GET request, data yang didapat kemudian disimpan pada `list<Product>`. Setelahnya, saya menampilkan data melalui widget `FutureBuilder` dengan nilai `Future`.
+
+> 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+Pada `loginPage`, pengguna memasukan user dan password. Setelah pengguna mengisi dan menekan tombol `login`, proyek flutter akan mengirimkan HTTP request dengan endpoint url django. Setelahnya, dilakukan proses autentikasi dan apabila username dan password sesuai, maka pengguna akan diarahkan ke homepage.
+
+> 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing
+* `TextField`, untuk melakukan input berupa teks.
+* `FutureBuilder`, membuat widget secara asinkronus, berguna untuk fetching
+* `Padding`, Menambahkan jarak di sekitar kontennya.
+* `Column`, Menampilkan elemen-elemen secara vertikal.
+* `Text`, Menampilkan teks "PBP Shop" sebagai judul toko.
+
+
+# Tugas 7
 >1. Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 Stateless adalah jenis widget yang bersifat final (tidak dapat diubah setelah dideklarasikan) Stateless dapat dianggap sebagai tampilan yang statis. Sedangkan Stateful merupakan jenis widget yang isinya dapat berubah berdasarkan perilaku dari user, contohnya adalah counter yang bertambah setiapkali tombol dipencet.
 
