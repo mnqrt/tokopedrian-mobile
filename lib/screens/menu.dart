@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
 				style: TextStyle(color: Colors.white),
 			),
 			),
-			backgroundColor: Colors.black87,
+			backgroundColor: Color.fromARGB(221, 67, 182, 54),
 			foregroundColor: Colors.white,
 		),
 		drawer: const LeftDrawer(),

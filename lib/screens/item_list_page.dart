@@ -51,7 +51,7 @@ class _ItemPageState extends State<ItemPage> {
                 return const Column(
                   children: [
                     Text(
-                      "Tidak ada data item.",
+                      "Item Kosong, Coba lagi. :(",
                       style: TextStyle(color: Color(0xff59A5D8), fontSize: 20),
                     ),
                     SizedBox(height: 8),
